@@ -13,5 +13,5 @@ def fibonacci_sequence(num):
         a, b = b, a+b
     return
 
-fibonacci_sequence(100)
+fibonacci_sequence(15)
 
