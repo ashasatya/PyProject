@@ -30,6 +30,6 @@ if values != []:
     item_tax = float(item_cost) * sales_tax[state]
     #print(item_tax)
     purchase_amount = round(float(item_cost) + float(item_tax), 2)
-    print(f'Item price is {item_cost}, sales tax is {round(item_tax, 2)} and Purchase amount {purchase_amount}')
+    print(f'Item price is ${item_cost}, sales tax is ${round(item_tax, 2)} and Purchase amount ${purchase_amount}')
 else:
     print('Rerun the program from the terminal and enter item_cost and the state of sales.')
