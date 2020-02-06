@@ -24,16 +24,15 @@ class LoginTest(unittest.TestCase):
         cls.driver.get("https://opensource-demo.orangehrmlive.com/")
 
     def test_01_login_invalid_password(self):
-        driver = self.driver
-
-        login = LoginPage(driver)
-        login.enter_username("Admin")
-        login.enter_password("admin1")
-        login.click_login()
-        login.invalid_credential_message()
-        # message = login.invalid_credential_message()
-        # self.assertEqual(message, "Invalid credentials")
-        time.sleep(2)
+         driver = self.driver
+         login = LoginPage(driver)
+         login.enter_username("Admin")
+         login.enter_password("admin1")
+         login.click_login()
+         login.invalid_credential_message()
+         # message = login.invalid_credential_message()
+         # self.assertEqual(message, "Invalid credentials")
+         time.sleep(2)
 
     def test_02_login_valid(self):
         driver = self.driver
@@ -62,114 +61,104 @@ class LoginTest(unittest.TestCase):
         time.sleep(2)
 
     def test_04_no_password(self):
-        driver = self.driver
+         driver = self.driver
 
-        login = LoginPage(driver)
-        login.enter_username("Admin")
-        login.enter_password("")
-        login.click_login()
-        login.no_password_message()
-        # message = login.no_password_message()
-        # self.assertEqual(message, "Password cannot be empty")
-        time.sleep(2)
+         login = LoginPage(driver)
+         login.enter_username("Admin")
+         login.enter_password("")
+         login.click_login()
+         login.no_password_message()
+         # message = login.no_password_message()
+         # self.assertEqual(message, "Password cannot be empty")
+         time.sleep(2)
 
     def test_05_no_username(self):
-        driver = self.driver
+         driver = self.driver
 
-        login = LoginPage(driver)
-        login.enter_username("")
-        login.enter_password("admin")
-        login.click_login()
-        login.no_username_message()
-        # message = login.no_username_message()
-        # self.assertEqual(message, "Username cannot be empty")
-        time.sleep(2)
+         login = LoginPage(driver)
+         login.enter_username("")
+         login.enter_password("admin")
+         login.click_login()
+         login.no_username_message()
+         # message = login.no_username_message()
+         # self.assertEqual(message, "Username cannot be empty")
+         time.sleep(2)
 
     def test_06_forgot_password(self):
-        driver = self.driver
+         driver = self.driver
 
-        login = LoginPage(driver)
-        login.forgot_password()
-        time.sleep(2)
+         login = LoginPage(driver)
+         login.forgot_password()
+         time.sleep(2)
 
-        forgot_password = ForgotPassword(driver)
-        forgot_password.cancel_password()
+         forgot_password = ForgotPassword(driver)
+         forgot_password.cancel_password()
 
     def test_07_reset_password_valid(self):
         # message = "Please contact HR admin in order to reset the password" scenario,
         # yet to figure out how to write script to read the javascript message on browser
-        driver = self.driver
+         driver = self.driver
 
-        login = LoginPage(driver)
-        login.forgot_password()
-        time.sleep(2)
+         login = LoginPage(driver)
+         login.forgot_password()
+         time.sleep(2)
 
-        forgot_password = ForgotPassword(driver)
-        forgot_password.reset_password("Admin")
-        time.sleep(2)
-        forgot_password.cancel_password()
+         forgot_password = ForgotPassword(driver)
+         forgot_password.reset_password("Admin")
+         time.sleep(2)
+         forgot_password.cancel_password()
 
     def test_08_reset_password_invalid(self):
         # message "Could not find a user with given details" scenario,
-        # yet to figure out how to write script to read the javascript message on browser
-        driver = self.driver
+         # yet to figure out how to write script to read the javascript message on browser
+         driver = self.driver
 
-        login = LoginPage(driver)
-        login.forgot_password()
-        time.sleep(1)
+         login = LoginPage(driver)
+         login.forgot_password()
+         time.sleep(1)
 
-        forgot_password = ForgotPassword(driver)
-        forgot_password.reset_password("")
-        time.sleep(2)
-        forgot_password.cancel_password()
+         forgot_password = ForgotPassword(driver)
+         forgot_password.reset_password("")
+         time.sleep(2)
+         forgot_password.cancel_password()
 
-    def test_09_admin_add_user_valid(self):
-        driver = self.driver
+    # def test_09_admin_add_user_valid(self):
+    #     driver = self.driver
+    #
+    #     login = LoginPage(driver)
+    #     login.enter_username("Admin")
+    #     login.enter_password("admin123")
+    #     login.click_login()
+    #     time.sleep(3)
+    #     # Click on Admin Page
+    #     admin = AdminPage(driver)
+    #     admin.ap_admin_page_navigation()
+    #     time.sleep(2)
+    #     # Add new user
+    #     admin.ap_um_cancel_add_user("Fiona Yellow", "F15Grace", "Yellow123", "yellow123")
+    #     time.sleep(2)
+    #     print("User Added successfully")
+    #     time.sleep(5)
 
-        login = LoginPage(driver)
-        login.enter_username("Admin")
-        login.enter_password("admin123")
-        login.click_login()
-        time.sleep(3)
-        # Click on Admin Page
-        admin = AdminPage(driver)
-        admin.ap_admin_page_navigation()
-        time.sleep(2)
-        # Add new user
-        admin.ap_add_user("Fiona Grace", "F7Grace", "grace123", "grace123")
-        time.sleep(2)
-        print("User Added successfully")
-        time.sleep(5)
+    # def test_10_admin_search_delete_user(self):
+    #     driver = self.driver
+    #
+    #     admin = AdminPage(driver)
+    #     time.sleep(2)
+    #     admin.ap_um_search_delete_user("F15Grace", "Fiona Yellow")
+    #     time.sleep(2)
+    #     # Need to add test scenario for no records found
 
-    def test_10_admin_add_user_cancel(self):
-        driver = self.driver
+    # def test_11_jobtitle_add(self):
+    #     driver = self.driver
+    #
+    #     # Click on Admin Page
+    #     admin = AdminPage(driver)
+    #     time.sleep(2)
+    #     admin.ap_jobtitle_cancel_add_jobtitle("test10")
+    #     time.sleep(2)
 
-        # Click on Admin Page
-        admin = AdminPage(driver)
-        time.sleep(2)
-        # cancel new user details
-        admin.ap_add_user_cancel("Fiona Grace", "F123456", "grace123", "grace123")
-
-    def test_11_admin_search_user(self):
-        driver = self.driver
-
-        admin = AdminPage(driver)
-        time.sleep(2)
-        admin.ap_search_user("F7Grace", "Fiona Grace")
-        time.sleep(2)
-
-    def test_12_admin_delete_user(self):
-        driver = self.driver
-
-        # Click on Admin Page
-        admin = AdminPage(driver)
-        time.sleep(2)
-        admin.ap_delete_user()
-        time.sleep(2)
-
-
-    @classmethod
-    # class function is used, always provide the annotation classmethod.
+    @classmethod # class function is used, always provide the annotation classmethod.
     def tearDownClass(cls):
         print("Test Complete")
         cls.driver.close()

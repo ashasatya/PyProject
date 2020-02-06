@@ -14,7 +14,8 @@ Separate the number of hours and minutes with a colon.
 '''
 
 import unittest
-import code_bytes
+
+from Tests import code_bytes
 
 
 class Testcoderbytes(unittest.TestCase):

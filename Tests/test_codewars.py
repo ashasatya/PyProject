@@ -17,7 +17,8 @@ Unit test suite for following functions
 '''
 
 import unittest
-import codewars
+
+from Tests import codewars
 
 
 class TestCodewars(unittest.TestCase):
@@ -30,29 +31,29 @@ class TestCodewars(unittest.TestCase):
         self.assertEqual(codewars.longest("inmanylanguages", "theresapairoffunctions"), "acefghilmnoprstuy")
 
     def test_validate_pin(self):
-        self.assertEqual(codewars.validate_pin("1"),False, "Wrong output for '1'")
-        self.assertEqual(codewars.validate_pin("12"),False, "Wrong output for '12'")
-        self.assertEqual(codewars.validate_pin("123"),False, "Wrong output for '123'")
-        self.assertEqual(codewars.validate_pin("12345"),False, "Wrong output for '12345'")
-        self.assertEqual(codewars.validate_pin("1234567"),False, "Wrong output for '1234567'")
-        self.assertEqual(codewars.validate_pin("-1234"),False, "Wrong output for '-1234'")
-        self.assertEqual(codewars.validate_pin("1.234"),False, "Wrong output for '1.234'")
-        self.assertEqual(codewars.validate_pin("00000000"),False, "Wrong output for '00000000'")
+        self.assertEqual(codewars.validate_pin("1"), False, "Wrong output for '1'")
+        self.assertEqual(codewars.validate_pin("12"), False, "Wrong output for '12'")
+        self.assertEqual(codewars.validate_pin("123"), False, "Wrong output for '123'")
+        self.assertEqual(codewars.validate_pin("12345"), False, "Wrong output for '12345'")
+        self.assertEqual(codewars.validate_pin("1234567"), False, "Wrong output for '1234567'")
+        self.assertEqual(codewars.validate_pin("-1234"), False, "Wrong output for '-1234'")
+        self.assertEqual(codewars.validate_pin("1.234"), False, "Wrong output for '1.234'")
+        self.assertEqual(codewars.validate_pin("00000000"), False, "Wrong output for '00000000'")
         #   "should return False for pins which contain characters other than digits")
-        self.assertEqual(codewars.validate_pin("a234"),False, "Wrong output for 'a234'")
-        self.assertEqual(codewars.validate_pin(".234"),False, "Wrong output for '.234'")
-        self.assertEqual(codewars.validate_pin("-123"),False, "Wrong output for '-123'")
-        self.assertEqual(codewars.validate_pin("-1.234"),False, "Wrong output for '-1.234'")
+        self.assertEqual(codewars.validate_pin("a234"), False, "Wrong output for 'a234'")
+        self.assertEqual(codewars.validate_pin(".234"), False, "Wrong output for '.234'")
+        self.assertEqual(codewars.validate_pin("-123"), False, "Wrong output for '-123'")
+        self.assertEqual(codewars.validate_pin("-1.234"), False, "Wrong output for '-1.234'")
         #   "should return True for valid pins"
-        self.assertEqual(codewars.validate_pin("1234"),True, "Wrong output for '1234'")
-        self.assertEqual(codewars.validate_pin("0000"),True, "Wrong output for '0000'")
-        self.assertEqual(codewars.validate_pin("1111"),True, "Wrong output for '1111'")
-        self.assertEqual(codewars.validate_pin("123456"),True, "Wrong output for '123456'")
-        self.assertEqual(codewars.validate_pin("098765"),True, "Wrong output for '098765'")
-        self.assertEqual(codewars.validate_pin("000000"),True, "Wrong output for '000000'")
-        self.assertEqual(codewars.validate_pin("123456"),True, "Wrong output for '123456'")
-        self.assertEqual(codewars.validate_pin("090909"),True, "Wrong output for '090909'")
-        self.assertEqual(codewars.validate_pin("9876"),True, "Wrong output for '9876'")
+        self.assertEqual(codewars.validate_pin("1234"), True, "Wrong output for '1234'")
+        self.assertEqual(codewars.validate_pin("0000"), True, "Wrong output for '0000'")
+        self.assertEqual(codewars.validate_pin("1111"), True, "Wrong output for '1111'")
+        self.assertEqual(codewars.validate_pin("123456"), True, "Wrong output for '123456'")
+        self.assertEqual(codewars.validate_pin("098765"), True, "Wrong output for '098765'")
+        self.assertEqual(codewars.validate_pin("000000"), True, "Wrong output for '000000'")
+        self.assertEqual(codewars.validate_pin("123456"), True, "Wrong output for '123456'")
+        self.assertEqual(codewars.validate_pin("090909"), True, "Wrong output for '090909'")
+        self.assertEqual(codewars.validate_pin("9876"), True, "Wrong output for '9876'")
 
     def test_grow(self):
         tests = [
@@ -97,7 +98,7 @@ class TestCodewars(unittest.TestCase):
         self.assertEqual(codewars.sum_array([3]), 0)
         self.assertEqual(codewars.sum_array([-3]), 0)
         # "Only two Element"
-        self.assertEqual(codewars.sum_array([ 3, 5]), 0)
+        self.assertEqual(codewars.sum_array([3, 5]), 0)
         self.assertEqual(codewars.sum_array([-3, -5]), 0)
         # "Real Tests"
         self.assertEqual(codewars.sum_array([6, 2, 1, 8, 10]), 16)
@@ -106,7 +107,7 @@ class TestCodewars(unittest.TestCase):
         self.assertEqual(codewars.sum_array([-6, 20, -1, 10, -12]), 3)
 
     def test_min_max(self):
-        self.assertEqual(codewars.min_max([1, 2, 3, 4, 5]),[1, 5])
+        self.assertEqual(codewars.min_max([1, 2, 3, 4, 5]), [1, 5])
         self.assertEqual(codewars.min_max([2334454, 5]), [5, 2334454])
         self.assertEqual(codewars.min_max([1]), [1, 1])
 

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2c9b9469-a97d-4d09-8e16-2c9a5a1ec6fb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Tests/accenture.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/admin_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Testscripts/forgot_password.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Testscripts/forgot_password.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Testscripts/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Testscripts/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/test_code_bytes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tests/test_code_bytes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Tests/test_codewars.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Tests/test_codewars.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../swap_vowels.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1XOyTO0HwO5QsiMSSkpasSZLBPF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c9b9469-a97d-4d09-8e16-2c9a5a1ec6fb" name="Default Changelist" comment="" />
+      <created>1580931442234</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580931442234</updated>
+    </task>
+    <servers />
+  </component>
+</project>
