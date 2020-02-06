@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4164c1f9-0e7a-4aea-8d93-5acef28058c2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Tests/accenture.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POMProject/Pages/admin_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/POMProject/Pages/admin_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POMProject/Testscripts/forgot_password.py" beforeDir="false" afterPath="$PROJECT_DIR$/POMProject/Testscripts/forgot_password.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POMProject/Testscripts/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/POMProject/Testscripts/login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/POMProject/Utility/drivers/chromedriver" beforeDir="false" afterPath="$PROJECT_DIR$/POMProject/Utility/drivers/chromedriver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/test_code_bytes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/test_code_bytes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/test_codewars.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/test_codewars.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swap_vowels.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyProject" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
