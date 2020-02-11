@@ -24,15 +24,15 @@ class LoginTest(unittest.TestCase):
         cls.driver.get("https://opensource-demo.orangehrmlive.com/")
 
     def test_01_login_invalid_password(self):
-         driver = self.driver
-         login = LoginPage(driver)
-         login.enter_username("Admin")
-         login.enter_password("admin1")
-         login.click_login()
-         login.invalid_credential_message()
-         # message = login.invalid_credential_message()
-         # self.assertEqual(message, "Invalid credentials")
-         time.sleep(2)
+        driver = self.driver
+        login = LoginPage(driver)
+        login.enter_username("Admin")
+        login.enter_password("admin1")
+        login.click_login()
+        login.invalid_credential_message()
+        # message = login.invalid_credential_message()
+        # self.assertEqual(message, "Invalid credentials")
+        time.sleep(2)
 
     def test_02_login_valid(self):
         driver = self.driver
@@ -61,66 +61,66 @@ class LoginTest(unittest.TestCase):
         time.sleep(2)
 
     def test_04_no_password(self):
-         driver = self.driver
+        driver = self.driver
 
-         login = LoginPage(driver)
-         login.enter_username("Admin")
-         login.enter_password("")
-         login.click_login()
-         login.no_password_message()
-         # message = login.no_password_message()
-         # self.assertEqual(message, "Password cannot be empty")
-         time.sleep(2)
+        login = LoginPage(driver)
+        login.enter_username("Admin")
+        login.enter_password("")
+        login.click_login()
+        login.no_password_message()
+        # message = login.no_password_message()
+        # self.assertEqual(message, "Password cannot be empty")
+        time.sleep(2)
 
     def test_05_no_username(self):
-         driver = self.driver
+        driver = self.driver
 
-         login = LoginPage(driver)
-         login.enter_username("")
-         login.enter_password("admin")
-         login.click_login()
-         login.no_username_message()
-         # message = login.no_username_message()
-         # self.assertEqual(message, "Username cannot be empty")
-         time.sleep(2)
+        login = LoginPage(driver)
+        login.enter_username("")
+        login.enter_password("admin")
+        login.click_login()
+        login.no_username_message()
+        # message = login.no_username_message()
+        # self.assertEqual(message, "Username cannot be empty")
+        time.sleep(2)
 
     def test_06_forgot_password(self):
-         driver = self.driver
+        driver = self.driver
 
-         login = LoginPage(driver)
-         login.forgot_password()
-         time.sleep(2)
+        login = LoginPage(driver)
+        login.forgot_password()
+        time.sleep(2)
 
-         forgot_password = ForgotPassword(driver)
-         forgot_password.cancel_password()
+        forgot_password = ForgotPassword(driver)
+        forgot_password.cancel_password()
 
     def test_07_reset_password_valid(self):
         # message = "Please contact HR admin in order to reset the password" scenario,
         # yet to figure out how to write script to read the javascript message on browser
-         driver = self.driver
+        driver = self.driver
 
-         login = LoginPage(driver)
-         login.forgot_password()
-         time.sleep(2)
+        login = LoginPage(driver)
+        login.forgot_password()
+        time.sleep(2)
 
-         forgot_password = ForgotPassword(driver)
-         forgot_password.reset_password("Admin")
-         time.sleep(2)
-         forgot_password.cancel_password()
+        forgot_password = ForgotPassword(driver)
+        forgot_password.reset_password("Admin")
+        time.sleep(2)
+        forgot_password.cancel_password()
 
     def test_08_reset_password_invalid(self):
         # message "Could not find a user with given details" scenario,
-         # yet to figure out how to write script to read the javascript message on browser
-         driver = self.driver
+        # yet to figure out how to write script to read the javascript message on browser
+        driver = self.driver
 
-         login = LoginPage(driver)
-         login.forgot_password()
-         time.sleep(1)
+        login = LoginPage(driver)
+        login.forgot_password()
+        time.sleep(1)
 
-         forgot_password = ForgotPassword(driver)
-         forgot_password.reset_password("")
-         time.sleep(2)
-         forgot_password.cancel_password()
+        forgot_password = ForgotPassword(driver)
+        forgot_password.reset_password("")
+        time.sleep(2)
+        forgot_password.cancel_password()
 
     # def test_09_admin_add_user_valid(self):
     #     driver = self.driver

@@ -24,7 +24,7 @@ driver.find_element_by_id("btnAdd").click()
 time.sleep(5)
 print("Test Complete")
 
-driver.find_element_by_id(" //a[@id='menu_admin_viewJobTitleList']").
+# driver.find_element_by_id(" //a[@id='menu_admin_viewJobTitleList']").
 
 
 

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4164c1f9-0e7a-4aea-8d93-5acef28058c2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/PyProject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POMProject/Testscripts/forgot_password.py" beforeDir="false" afterPath="$PROJECT_DIR$/POMProject/Testscripts/forgot_password.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POMProject/Testscripts/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/POMProject/Testscripts/login.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,5 +90,9 @@
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="186" y="100" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.830@0.23.1440.830" timestamp="1580931961822" />
+    <state x="401" y="270" key="com.intellij.ide.util.TipDialog" timestamp="1581019261425">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="401" y="270" key="com.intellij.ide.util.TipDialog/0.23.1440.829@0.23.1440.829" timestamp="1581019261425" />
   </component>
 </project>
