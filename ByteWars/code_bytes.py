@@ -39,8 +39,8 @@ Output:I Ran There
 """
 
 
-def LetterCapitalize(str):
-    new_str = str.split(" ")
+def LetterCapitalize(str1):
+    new_str = str1.split(" ")
     capitalized_str = []
     for word in new_str:
         capitalized_str.append(word.capitalize())
@@ -55,9 +55,9 @@ Words are separated by dots.
 """
 
 
-def reverse_string(strng):
+def reverse_string(str2):
 
-    new_strng = strng.split(".")
+    new_strng = str2.split(".")
     i = 0
     j = len(new_strng) -1
 
@@ -147,7 +147,7 @@ def TimeConvert(num):
 
     return f'{hours}:{minutes}'
 
-print(type(TimeConvert(100)))
+# print(type(TimeConvert(100)))
 
 """
 Longest word in the string along with removing the special characters
@@ -164,20 +164,6 @@ def long_word(strng):
             longest_size = len(word)
     return longest_word
 
-"""
-FizzBuZZ sequence
-
-"""
-
-for i in range(1, 20):
-    if i % 3 == 0 and i % 5 == 0:
-        print("FizzBuZZ")
-    elif i % 3 == 0:
-        print("Fizz")
-    elif i % 5 == 0:
-        print("Buzz")
-    else:
-        print(i)
 
 """
 Coin flip and return the number of times Heads and Tails appear
@@ -204,9 +190,9 @@ String Palindrome
 """
 
 
-def palindrome(strng):
-    rev_strng = strng[::-1]
-    if strng == rev_strng:
+def palindrome(str1):
+    rev_str2 = str1[::-1]
+    if str1 == rev_str2:
         print("string is a palindrome")
     else:
         print("string is not a palindrome")

@@ -17,13 +17,13 @@ Unit test suite for following functions
 '''
 
 import unittest
+import HtmlTestRunner
+import codewars
 
-from ByteWars import codewars
 
 class TestCodewars(unittest.TestCase):
 
     def test_longest(self):
-
         self.shortDescription()
         self.assertEqual(codewars.longest("aretheyhere", "yestheyarehere"), "aehrsty")
         self.assertEqual(codewars.longest("loopingisfunbutdangerous", "lessdangerousthancoding"), "abcdefghilnoprstu")
@@ -56,10 +56,10 @@ class TestCodewars(unittest.TestCase):
 
     def test_grow(self):
         tests = [
-                [6, [1, 2, 3]],
-                [16, [4, 1, 1, 1, 4]],
-                [64, [2, 2, 2, 2, 2, 2]],
-            ]
+            [6, [1, 2, 3]],
+            [16, [4, 1, 1, 1, 4]],
+            [64, [2, 2, 2, 2, 2, 2]],
+        ]
 
         for exp, inp in tests:
             self.assertEqual(codewars.grow(inp), exp)
@@ -117,15 +117,13 @@ class TestCodewars(unittest.TestCase):
 
     def test_swap_vowels(self):
         self.assertEqual(codewars.swap_vowels("automation"), "oitamotuan")  # word with vowels
-    #   self.assertEqual(codewars.swap_vowels("A23444U"), "U23444A")    # alphanumeric text with capital letter
+        #   self.assertEqual(codewars.swap_vowels("A23444U"), "U23444A")    # alphanumeric text with capital letter
         self.assertEqual(codewars.swap_vowels(""), "")  # empty text
         self.assertEqual(codewars.swap_vowels("i!888out"), "u!o888it")  # alphanumeric text with special character
         self.assertEqual(codewars.swap_vowels("text"), "text")  # word with only one vowel (no option for swap)
-        self.assertEqual(codewars.swap_vowels("hello world"), "hollo werld")    # two words with vowels
-        self.assertEqual(codewars.swap_vowels("rhythm"), "rhythm") # word with no vowels
+        self.assertEqual(codewars.swap_vowels("hello world"), "hollo werld")  # two words with vowels
+        self.assertEqual(codewars.swap_vowels("rhythm"), "rhythm")  # word with no vowels
 
 
 if __name__ == '__main__':
-    unittest.main()
-
-
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner())
