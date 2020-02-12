@@ -4,6 +4,7 @@ import time
 import unittest
 import sys
 import os
+
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 from POMProject.Pages.login_page import LoginPage
 from POMProject.Pages.home_page import HomePage
@@ -13,11 +14,10 @@ import HtmlTestRunner
 
 
 class LoginTest(unittest.TestCase):
-
     path = "/Users/AshaSatyakumar/Documents/Tools/WorkFolder/PyProject/POMProject/Utility/drivers/chromedriver"
     driver = webdriver.Chrome(executable_path=path)
 
-    @classmethod    # class function is used, always provide the annotation classmethod.
+    @classmethod  # class function is used, always provide the annotation classmethod.
     def setUpClass(cls):
         # cls.driver.implicitly_wait(10)
         cls.driver.maximize_window()
@@ -158,7 +158,7 @@ class LoginTest(unittest.TestCase):
     #     admin.ap_jobtitle_cancel_add_jobtitle("test10")
     #     time.sleep(2)
 
-    @classmethod # class function is used, always provide the annotation classmethod.
+    @classmethod  # class function is used, always provide the annotation classmethod.
     def tearDownClass(cls):
         print("Test Complete")
         cls.driver.close()
@@ -168,9 +168,3 @@ class LoginTest(unittest.TestCase):
 if __name__ == "__main__":
     reports_path = "/Users/AshaSatyakumar/Documents/Tools/WorkFolder/PyProject/POMProject/Reports"
     unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output=reports_path))
-
-
-
-
-
-
