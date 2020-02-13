@@ -32,23 +32,10 @@ class LoginTest(unittest.TestCase):
         login.invalid_credential_message()
         # message = login.invalid_credential_message()
         # self.assertEqual(message, "Invalid credentials")
-        time.sleep(2)
+        # self.driver.implicitly_wait(10)
+        time.sleep(5)
 
-    def test_02_login_valid(self):
-        driver = self.driver
-
-        login = LoginPage(driver)
-        login.enter_username("Admin")
-        login.enter_password("admin123")
-        login.click_login()
-
-        home = HomePage(driver)
-        home.click_welcome()
-        time.sleep(1)
-        home.click_logout()
-        time.sleep(2)
-
-    def test_03_login_invalid_username(self):
+    def test_02_login_invalid_username(self):
         driver = self.driver
 
         login = LoginPage(driver)
@@ -58,9 +45,10 @@ class LoginTest(unittest.TestCase):
         login.invalid_credential_message()
         # message = login.invalid_credential_message()
         # self.assertEqual(message, "Invalid credentials")
-        time.sleep(2)
+        # driver.implicitly_wait(10)
+        time.sleep(5)
 
-    def test_04_no_password(self):
+    def test_03_no_password(self):
         driver = self.driver
 
         login = LoginPage(driver)
@@ -70,9 +58,9 @@ class LoginTest(unittest.TestCase):
         login.no_password_message()
         # message = login.no_password_message()
         # self.assertEqual(message, "Password cannot be empty")
-        time.sleep(2)
+        time.sleep(5)
 
-    def test_05_no_username(self):
+    def test_04_no_username(self):
         driver = self.driver
 
         login = LoginPage(driver)
@@ -82,80 +70,94 @@ class LoginTest(unittest.TestCase):
         login.no_username_message()
         # message = login.no_username_message()
         # self.assertEqual(message, "Username cannot be empty")
-        time.sleep(2)
+        time.sleep(5)
 
-    def test_06_forgot_password(self):
+    def test_05_forgot_password(self):
         driver = self.driver
 
         login = LoginPage(driver)
         login.forgot_password()
-        time.sleep(2)
+        time.sleep(5)
 
         forgot_password = ForgotPassword(driver)
         forgot_password.cancel_password()
-
-    def test_07_reset_password_valid(self):
+    #
+    def test_06_reset_password_valid(self):
         # message = "Please contact HR admin in order to reset the password" scenario,
         # yet to figure out how to write script to read the javascript message on browser
         driver = self.driver
 
         login = LoginPage(driver)
         login.forgot_password()
-        time.sleep(2)
+        time.sleep(5)
 
         forgot_password = ForgotPassword(driver)
         forgot_password.reset_password("Admin")
-        time.sleep(2)
+        time.sleep(5)
         forgot_password.cancel_password()
 
-    def test_08_reset_password_invalid(self):
+    def test_07_reset_password_invalid(self):
         # message "Could not find a user with given details" scenario,
         # yet to figure out how to write script to read the javascript message on browser
         driver = self.driver
 
         login = LoginPage(driver)
         login.forgot_password()
-        time.sleep(1)
+        time.sleep(5)
 
         forgot_password = ForgotPassword(driver)
         forgot_password.reset_password("")
-        time.sleep(2)
+        time.sleep(5)
         forgot_password.cancel_password()
-
-    # def test_09_admin_add_user_valid(self):
+    #
+    # def test_08_login_valid(self):
     #     driver = self.driver
     #
     #     login = LoginPage(driver)
     #     login.enter_username("Admin")
     #     login.enter_password("admin123")
     #     login.click_login()
-    #     time.sleep(3)
-    #     # Click on Admin Page
-    #     admin = AdminPage(driver)
-    #     admin.ap_admin_page_navigation()
-    #     time.sleep(2)
-    #     # Add new user
-    #     admin.ap_um_cancel_add_user("Fiona Yellow", "F15Grace", "Yellow123", "yellow123")
-    #     time.sleep(2)
-    #     print("User Added successfully")
-    #     time.sleep(5)
-
-    # def test_10_admin_search_delete_user(self):
-    #     driver = self.driver
     #
-    #     admin = AdminPage(driver)
-    #     time.sleep(2)
-    #     admin.ap_um_search_delete_user("F15Grace", "Fiona Yellow")
-    #     time.sleep(2)
-    #     # Need to add test scenario for no records found
-
-    # def test_11_jobtitle_add(self):
-    #     driver = self.driver
+    #     home = HomePage(driver)
+    #     home.click_welcome()
+    #     driver.implicitly_wait(10)
+    #     home.click_logout()
+    #     driver.implicitly_wait(10)
     #
-    #     # Click on Admin Page
-    #     admin = AdminPage(driver)
-    #     time.sleep(2)
-    #     admin.ap_jobtitle_cancel_add_jobtitle("test10")
+    # # def test_09_admin_add_user_valid(self):
+    # #     driver = self.driver
+    # #
+    # #     login = LoginPage(driver)
+    # #     login.enter_username("Admin")
+    # #     login.enter_password("admin123")
+    # #     login.click_login()
+    # #     time.sleep(3)
+    # #     # Click on Admin Page
+    # #     admin = AdminPage(driver)
+    # #     admin.ap_admin_page_navigation()
+    # #     time.sleep(2)
+    # #     # Add new user
+    # #     admin.ap_um_cancel_add_user("Fiona Yellow", "F15Grace", "Yellow123", "yellow123")
+    # #     time.sleep(2)
+    # #     print("User Added successfully")
+    # #     time.sleep(5)
+    #
+    # # def test_10_admin_search_delete_user(self):
+    # #     driver = self.driver
+    # #
+    # #     admin = AdminPage(driver)
+    # #     time.sleep(2)
+    # #     admin.ap_um_search_delete_user("F15Grace", "Fiona Yellow")
+    # #     time.sleep(2)
+    # #     # Need to add test scenario for no records found
+    #
+    # # def test_11_jobtitle_add(self):
+    # #     driver = self.driver
+    # #
+    # #     # Click on Admin Page
+    # #     admin = AdminPage(driver)
+    # #     time.sleep(2)
+    # #     admin.ap_jobtitle_cancel_add_jobtitle("test10")
     #     time.sleep(2)
 
     @classmethod  # class function is used, always provide the annotation classmethod.
