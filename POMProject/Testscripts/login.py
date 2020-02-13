@@ -109,21 +109,21 @@ class LoginTest(unittest.TestCase):
         forgot_password.reset_password("")
         time.sleep(5)
         forgot_password.cancel_password()
-    #
-    # def test_08_login_valid(self):
-    #     driver = self.driver
-    #
-    #     login = LoginPage(driver)
-    #     login.enter_username("Admin")
-    #     login.enter_password("admin123")
-    #     login.click_login()
-    #
-    #     home = HomePage(driver)
-    #     home.click_welcome()
-    #     driver.implicitly_wait(10)
-    #     home.click_logout()
-    #     driver.implicitly_wait(10)
-    #
+
+    def test_08_login_valid(self):
+        driver = self.driver
+
+        login = LoginPage(driver)
+        login.enter_username("Admin")
+        login.enter_password("admin123")
+        login.click_login()
+
+        home = HomePage(driver)
+        home.click_welcome()
+        time.sleep(2)
+        home.click_logout()
+        time.sleep(2)
+
     # # def test_09_admin_add_user_valid(self):
     # #     driver = self.driver
     # #
